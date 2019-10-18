@@ -27,11 +27,11 @@ export default function SearchForm(props) {
   }, [characters, searchTerm]);
 
   return (
-    <SearchForm>
-     <Search type="text" placeholder="Search" value={searchTerm} onChange={e => setSearchTerm(e.target.value) }/>
+    <section class="search-form">
+     <input type="text" placeholder="Search" value={searchTerm} onChange={e => setSearchTerm(e.target.value) }/>
       <Done>
         { searchResults[0] && searchResults.map((result, index) => <CharacterCard key={index} character={result}/>) }
       </Done>
-    </SearchForm>
+    </section>
   );
 }

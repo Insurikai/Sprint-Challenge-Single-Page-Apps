@@ -26,8 +26,8 @@ export default function CharacterList() {
   }, []);
 
   return (
-    <CharacterList className="character-list">
+    <section className="character-list">
       <SearchForm results={characters}/>
-    </CharacterList>
+    </section>
   );
 }
